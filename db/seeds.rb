@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+House.destroy_all
+Character.destroy_all
+
+house_stark = House.create(house_name: 'Stark', moto: 'something something Northside', sigil: 'probably a wolf')
+house_lannister = House.create(house_name: 'Lannister', moto: 'hear me roar', sigil: 'some sort of griffon' )
+
+
+john_snow = house_stark.characters.create(char_name: 'John Snow', photo_url: 'photo here')
+cersei_lannister = house_lannister.characters.create(char_name: 'Cersei', photo_url: 'photo here')
