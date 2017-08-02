@@ -1,1 +1,7 @@
-index working
+<h1>Houses of Westeros</h1>
+
+<ul>
+  <% @houses.each do |house| %>
+  <h2><%= link_to house.house_name, house_path(house) %></h2>
+  <% end %>
+</ul>
