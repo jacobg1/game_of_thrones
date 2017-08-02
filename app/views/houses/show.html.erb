@@ -1,0 +1,15 @@
+<h1>House <%= @house.house_name %></h1>
+
+<ul>
+  <h3>House Moto:</h3>
+  <p><%= @house.moto %></p>
+  <br>
+  <h3>House Sigil:</h3>
+  <p><%= @house.sigil %></p>
+  <br>
+  <h3>Characters</h3>
+  <% @house.characters.each do |character| %>
+  <p><%= character.char_name %></p>
+  <img src="<%= character.photo_url %>"/>
+  <% end %>
+</ul>

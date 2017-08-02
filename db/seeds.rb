@@ -12,5 +12,5 @@ house_stark = House.create(house_name: 'Stark', moto: 'something something North
 house_lannister = House.create(house_name: 'Lannister', moto: 'hear me roar', sigil: 'some sort of griffon' )
 
 
-john_snow = house_stark.characters.create(char_name: 'John Snow', photo_url: 'photo here')
+john_snow = house_stark.characters.create(char_name: 'John Snow', photo_url: 'http://www.elcomercio.es/el_correo/noticias/201509/16/media/cortadas/jon-snow--490x578.jpg')
 cersei_lannister = house_lannister.characters.create(char_name: 'Cersei', photo_url: 'photo here')
