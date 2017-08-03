@@ -1,6 +1,8 @@
 <h1>House <%= @house.house_name %></h1>
-<%= link_to "edit house", edit_house_path(@house) %>
+<% if @house.user == current_user %>
+<%= link_to 'edit house', edit_house_path(@house) %>
 <%= link_to 'Destroy House', house_path(@house), method: :delete %>
+<% end %>
 
 <ul>
   <h3>House Moto:</h3>

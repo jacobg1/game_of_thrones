@@ -1,5 +1,6 @@
 <h2>Edit House</h2>
 
 <%= render 'form' %>
-
+<% if @house.user == current_user %>
 <%= link_to 'Destroy House', house_path, method: :delete %>
+<% end %>

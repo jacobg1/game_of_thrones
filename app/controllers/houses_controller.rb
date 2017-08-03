@@ -9,6 +9,10 @@ class HousesController < ApplicationController
   #edit
   def edit
     @house = House.find(params[:id])
+      if @house.user != current_user
+        flash[:alert] = 'only head of house can change properties'
+        redirect_to house_path(@house)
+      end
   end
   #new
   def new
@@ -22,13 +26,21 @@ class HousesController < ApplicationController
   #update
   def update
     @house = House.find(params[:id])
-    @house.update(house_params)
-    redirect_to house_path(@house)
+    if @house.user == current_user
+       @house.update(house_params)
+    else
+      flash[:alert] = 'only head of house can change properties'
+    end
+      redirect_to house_path(@house)
   end
   #destroy
   def destroy
     @house = House.find(params[:id])
-    @house.destroy
+    if @house.user == current_user
+      @house.destroy
+    else
+      flash[:alert] = 'Only creator of house can tear it down'
+    end
     redirect_to houses_path
   end
 
