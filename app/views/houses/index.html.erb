@@ -2,7 +2,9 @@
 <p><%= link_to "(+) house", new_house_path %></p>
 <div class="house_index">
   <% @houses.each do |house| %>
+  <div class="house_index2">
   <h2><%= link_to house.house_name, house_path(house), :class => "index_links" %></h2>
   <img src="<%= house.house_photo_url %>"/>
+  </div>
   <% end %>
 </div>

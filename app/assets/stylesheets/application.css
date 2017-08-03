@@ -34,5 +34,7 @@ p, h1, h2, h3 {
 }
 .house_index {
   display: flex;
-  justify-content: center;
+justify-content: space-around;
+}
+.house_index2 {
 }
