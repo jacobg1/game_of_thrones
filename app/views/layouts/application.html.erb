@@ -9,7 +9,11 @@
   </head>
 
   <body>
-    <p><%= link_to "Home", root_path %></p> <p><%= link_to "New House", new_house_path %></p>
+    <nav>
+      <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       <p><%= link_to "Home", root_path %></p> <p><%= link_to "New House", new_house_path %></p>
+    </nav>
     <%= yield %>
   </body>
 </html>
