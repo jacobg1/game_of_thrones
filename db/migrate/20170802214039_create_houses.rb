@@ -4,6 +4,7 @@ class CreateHouses < ActiveRecord::Migration[5.1]
       t.string :house_name
       t.string :moto
       t.string :sigil
+      t.string :house_photo_url
     end
   end
 end

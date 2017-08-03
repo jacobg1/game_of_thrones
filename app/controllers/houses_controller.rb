@@ -34,6 +34,6 @@ class HousesController < ApplicationController
 
   private
   def house_params
-    params.require(:house).permit(:house_name, :moto, :sigil)
+    params.require(:house).permit(:house_name, :moto, :sigil, :house_photo_url)
   end
 end

@@ -8,6 +8,7 @@
   <br>
   <h3>House Sigil:</h3>
   <p><%= @house.sigil %></p>
+  <img src="<%= @house.house_photo_url %>"/>
   <br>
   <h3>Characters:</h3>
   <p><%= link_to 'add character', new_house_character_path(@house) %></p>
