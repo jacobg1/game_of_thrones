@@ -33,6 +33,13 @@ class CharactersController < ApplicationController
   end
 
   #destroy
+  def destroy
+    @house = House.find(params[:house_id])
+    @character = Character.find(params[:id])
+    @character.destroy
+    redirect_to houses_path
+  end
+
   private
   def character_params
     params.require(:character).permit(:char_name, :photo_url)

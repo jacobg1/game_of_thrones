@@ -1,2 +1,4 @@
 <h2>Edit Character:</h2>
 <%= render 'form' %>
+
+<%= link_to 'Kill Character', house_character_path(@house, @character), method: :delete %>
