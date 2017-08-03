@@ -1,0 +1,11 @@
+<%= form_for([@house, @character]) do |f| %>
+
+  <%= f.label :char_name %>
+  <%= f.text_field :char_name %>
+
+  <%= f.label :photo_url %>
+  <%= f.text_field :photo_url%>
+
+  <%= f.submit %>
+
+<% end %>

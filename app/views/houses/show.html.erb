@@ -9,9 +9,10 @@
   <h3>House Sigil:</h3>
   <p><%= @house.sigil %></p>
   <br>
-  <h3>Characters</h3>
+  <h3>Characters:</h3>
+  <p><%= link_to 'add character', new_house_character_path(@house) %></p>
   <% @house.characters.each do |character| %>
-  <p><%= character.char_name %></p>
+  <p><%= link_to character.char_name, house_character_path(@house, character) %></p>
   <img src="<%= character.photo_url %>"/>
   <% end %>
 </ul>
