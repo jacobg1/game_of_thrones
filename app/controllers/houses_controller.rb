@@ -16,7 +16,7 @@ class HousesController < ApplicationController
   end
   #create
   def create
-    @house = House.create(house_params)
+    @house = current_user.houses.create!(house_params)
     redirect_to house_path(@house)
   end
   #update
