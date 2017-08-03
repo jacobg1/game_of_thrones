@@ -14,6 +14,8 @@ andy = User.create!(email: 'andrew.whitley@generalassemb.ly', password: 'passwor
 
 house_stark = andy.houses.create!(house_name: 'Stark', moto: 'something something Northside', sigil: 'probably a wolf', house_photo_url: "https://images-na.ssl-images-amazon.com/images/I/41cN7PEiXzL.jpg")
 house_lannister = andy.houses.create!(house_name: 'Lannister', moto: 'hear me roar', sigil: 'some sort of griffon', house_photo_url: "https://s-media-cache-ak0.pinimg.com/236x/55/3a/21/553a21aa0011fce811c7a862f333cc90--house-lannister--day-challenge.jpg")
+house_tyrell = andy.houses.create!(house_name: 'Tyrell', moto: 'growing strong', sigil: 'golden rose', house_photo_url: "http://img15.hostingpics.net/pics/423766HouseTyrell.png")
+house_tyrell = andy.houses.create!(house_name: 'Targaryen', moto: 'fire and blood', sigil: 'three headed dragon', house_photo_url: "http://i.imgur.com/ZOy4qyr.png")
 
 
 john_snow = house_stark.characters.create!(char_name: 'John Snow', description: 'Badass', photo_url: 'http://www.elcomercio.es/el_correo/noticias/201509/16/media/cortadas/jon-snow--490x578.jpg')
