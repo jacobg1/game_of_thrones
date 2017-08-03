@@ -17,11 +17,20 @@ class CharactersController < ApplicationController
     @house = House.find(params[:house_id])
     @character = Character.find(params[:id])
   end
+
   #edit
-
-
+  def edit
+    @house = House.find(params[:house_id])
+    @character = Character.find(params[:id])
+  end
 
   #update
+  def update
+    @house = House.find(params[:house_id])
+    @character = Character.find(params[:id])
+    @character.update(character_params)
+    redirect_to house_character_path(@house, @character)
+  end
 
   #destroy
   private
