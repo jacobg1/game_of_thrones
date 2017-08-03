@@ -15,9 +15,24 @@
  */
 
 body {
-  background-color: black;
+  background-color: lemonchiffon;
+  text-align: center;
+}
+nav {
+  text-align: left;
 }
 p, h1, h2, h3 {
-  color: white;
-  
+  color: purple;
+}
+.index_links {
+  text-decoration: none;
+
+}
+
+.index_links:hover {
+  text-decoration: underline;
+}
+.house_index {
+  display: flex;
+  justify-content: center;
 }

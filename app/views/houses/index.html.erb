@@ -1,8 +1,8 @@
 <h1>Houses of Westeros</h1>
-<p><%= link_to "New House", new_house_path %></p>
-
-<ul>
+<p><%= link_to "(+) house", new_house_path %></p>
+<div class="house_index">
   <% @houses.each do |house| %>
-  <h2><%= link_to house.house_name, house_path(house) %></h2>
+  <h2><%= link_to house.house_name, house_path(house), :class => "index_links" %></h2>
+  <img src="<%= house.house_photo_url %>"/>
   <% end %>
-</ul>
+</div>
