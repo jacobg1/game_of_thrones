@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170803145603) do
+ActiveRecord::Schema.define(version: 20170803155355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(version: 20170803145603) do
     t.string "moto"
     t.string "sigil"
     t.string "house_photo_url"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_houses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,4 +50,5 @@ ActiveRecord::Schema.define(version: 20170803145603) do
   end
 
   add_foreign_key "characters", "houses"
+  add_foreign_key "houses", "users"
 end
